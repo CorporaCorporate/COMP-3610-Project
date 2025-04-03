@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Constituency Map</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+  <h1>Trinidad and Tobago Constituency Map</h1>
+  <script>
+    const width = 1500;
+    const height = 600;
+  
+    const svg = d3.select("body")
+                  .append("svg")
+                  .attr("width", width)
+                  .attr("height", height);
+  
+    d3.json("Trinidad_and_Tobago_Constituency_Map_(2010-present).geojson").then(function(data) {console.log("GeoJSON data loaded:", data);
+  
+        // Access the features array
+        const features = data.features.filter(feature => {
+            const geometry = feature.geometry;
+            return geometry && geometry.type && geometry.coordinates;
+        });
+
+        console.log("Filtered features:", features);
+  
+        // Create the projection after the GeoJSON data is loaded
+        const projection = d3.geoMercator().scale(1000).translate([width / 2, height / 2]);
+  
+        const path = d3.geoPath().projection(projection);
+
+          // Render the map
+          svg.selectAll("path")
+             .data(features) // Use the features array
+             .enter()
+             .append("path")
+             .attr("d", path)
+             .attr("fill", "#ccc")
+             .attr("stroke", "#333");
+      })
+      .catch(function(error) {
+          console.error("Error loading GeoJSON:", error);
+      });
+  </script>
+</body>
+</html>
