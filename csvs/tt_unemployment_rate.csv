@@ -1,51 +1,51 @@
 ,indicator,country,countryiso3code,date,value,unit,obs_status,decimal
-0,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2023,4.21,,,1
-1,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2022,4.383,,,1
-2,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2021,4.446,,,1
-3,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2020,4.206,,,1
-4,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2019,3.523,,,1
-5,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2018,3.498,,,1
-6,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2017,3.394,,,1
-7,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2016,3.207,,,1
-8,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2015,2.428,,,1
-9,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2014,2.477,,,1
-10,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2013,2.683,,,1
-11,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2012,3.718,,,1
-12,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2011,3.425,,,1
-13,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2010,4.033,,,1
-14,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2009,5.28,,,1
-15,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2008,4.63,,,1
-16,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2007,5.54,,,1
-17,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2006,6.27,,,1
-18,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2005,7.95,,,1
-19,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2004,8.33,,,1
-20,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2003,10.48,,,1
-21,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2002,10.39,,,1
-22,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2001,10.88,,,1
-23,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2000,12.1,,,1
-24,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,1999,13.12,,,1
-25,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,1998,14.21,,,1
-26,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,1997,15.01,,,1
-27,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,1996,16.25,,,1
-28,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,1995,17.22,,,1
-29,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,1994,18.44,,,1
-30,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,1993,19.81,,,1
-31,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,1992,19.66,,,1
-32,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,1991,18.52,,,1
-33,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,1990,,,,1
-34,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,1989,,,,1
-35,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,1988,,,,1
-36,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,1987,,,,1
-37,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,1986,,,,1
-38,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,1985,,,,1
-39,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,1984,,,,1
-40,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,1983,,,,1
-41,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,1982,,,,1
-42,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,1981,,,,1
-43,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,1980,,,,1
-44,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,1979,,,,1
-45,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,1978,,,,1
-46,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,1977,,,,1
-47,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,1976,,,,1
-48,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,1975,,,,1
-49,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force) (modeled ILO estimate)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,1974,,,,1
+0,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2100,,,,1
+1,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2095,,,,1
+2,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2090,,,,1
+3,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2085,,,,1
+4,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2080,,,,1
+5,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2075,,,,1
+6,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2070,,,,1
+7,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2065,,,,1
+8,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2060,,,,1
+9,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2055,,,,1
+10,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2050,,,,1
+11,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2049,,,,1
+12,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2048,,,,1
+13,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2047,,,,1
+14,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2046,,,,1
+15,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2045,,,,1
+16,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2044,,,,1
+17,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2043,,,,1
+18,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2042,,,,1
+19,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2041,,,,1
+20,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2040,,,,1
+21,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2039,,,,1
+22,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2038,,,,1
+23,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2037,,,,1
+24,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2036,,,,1
+25,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2035,,,,1
+26,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2034,,,,1
+27,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2033,,,,1
+28,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2032,,,,1
+29,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2031,,,,1
+30,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2030,,,,1
+31,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2029,,,,1
+32,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2028,,,,1
+33,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2027,,,,1
+34,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2026,,,,1
+35,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2025,,,,1
+36,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2024,,,,1
+37,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2023,,,,1
+38,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2022,,,,1
+39,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2021,,,,1
+40,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2020,,,,1
+41,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2019,2.68600010871887,,,1
+42,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2018,2.5,,,1
+43,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2017,2.70600008964539,,,1
+44,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2016,2.97199988365173,,,1
+45,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2015,2.21099996566772,,,1
+46,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2014,2.22399997711182,,,1
+47,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2013,2.46000003814697,,,1
+48,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2012,3.45300006866455,,,1
+49,"{'id': 'SL.UEM.TOTL.ZS', 'value': 'Unemployment, total (% of total labor force)'}","{'id': 'TT', 'value': 'Trinidad and Tobago'}",TTO,2011,3.24799990653992,,,1
