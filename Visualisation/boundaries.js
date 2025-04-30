@@ -51,13 +51,17 @@ d3.json("constituency_leaning_predictions.json").then(function(predictions) {
             .attr("fill", d => {
                 const constituencyName = d.properties.constituency;
                 const predictedParty = predictions[constituencyName];
+                console.log( "Party Colours", partyColors[predictedParty] || partyColors["Other"])
                 return partyColors[predictedParty] || partyColors["Other"]; // Default to gray if no prediction is found
             })
+
             .attr("stroke", "#fff")
             .attr("stroke-width", 1)
             .on("mouseover", function(event, d) {
+                const constituencyName = d.properties.constituency;
+                const predictedParty = predictions[constituencyName];
                 if (d3.select(this).attr("fill") === partyColors["Other"]) {
-                    d3.select(this).attr("fill", "#809c13");
+                    d3.select(this).attr("fill", partyColors[predictedParty] || partyColors["Other"]);
                 }
             })
             .on("mouseout", function(event, d) {
@@ -67,10 +71,11 @@ d3.json("constituency_leaning_predictions.json").then(function(predictions) {
                     d3.select(this).attr("fill", partyColors[predictedParty] || partyColors["Other"]);
                 }
             })
-            .on("click", function(event, d) {
-                const color = document.getElementById("colorPicker").value;
-                d3.select(this).attr("fill", color);
-            });
+        //     .on("click", function(event, d) {
+        //         const color = document.getElementById("colorPicker").value;
+        //         d3.select(this).attr("fill", color);
+        //     }
+        // );
 
         // Clear all colors
         document.getElementById("clearButton").addEventListener("click", function() {
