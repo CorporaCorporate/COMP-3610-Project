@@ -11,7 +11,7 @@
 11. Tunapuna - Unknown_675
 12. St. Augustine - Unknown_682
 13. Arouca/Maloney - Unknown_680
-14. Lopinot Bonair West - Unknown_680
+14. Lopinot Bonair West - 
 15. D'abadie Omera - Unknown_684
 16. ARIMA - Unknown_662
 17. TOCO/SG - Unknown_660 
@@ -36,7 +36,7 @@
 36. Siparia - Unknown_665
 37. Oropouch East - Unknown_679
 38. Oropouch West - Unknown_677
-39. Fyzabad - Unknown_663
+39. Fyzabad - 
 40. La Brea - Unknown_663
 41. Point Fortin - Unknown_657
 
