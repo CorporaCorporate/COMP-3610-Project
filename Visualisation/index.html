@@ -1,47 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Constituency Map</title>
-  <script src="https://d3js.org/d3.v7.min.js"></script>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
-    #colorPicker {
-      margin-top: 20px;
-      padding: 5px;
-      font-size: 16px;
-    }
-    #svgWrapper {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 20px auto; 
-      max-width: 100%;
-      height: auto;
-    }
-    svg {
-        max-width: 100%; 
-        height: auto;
-    }
-  </style>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constituency Map</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="stylesheet" href="map.css">
+  </head>
 <body>
   <h1>Trinidad and Tobago Constituency Map</h1>
-  <p>Select a color from the dropdown and click on a region to apply the color.</p>
+  <p>2025 General Election Prediction</p>
+  <div id="tooltip" class="tooltip"></div>
+  <div id="seatBarContainer">
+    <div id="seatBar">
+      <div id="pnmBar" class="seatSegment"></div>
+      <div id="uncBar" class="seatSegment"></div>
+      <div id="majorityLine"></div> <!-- Majority marker -->
+    </div>
+    <div id="seatLabels">
+      <span id="pnmCount">0</span> P.N.M.
+      <span id="uncCount">0</span> U.N.C.
+    </div>
+  </div>
 
-  <!-- Select colors -->
-  <select id="colorPicker">
-    <option value="red">Red</option>
-    <option value="yellow">Yellow</option>
-    <option value="blue">Blue</option>
-  </select>
-
-  <!-- Clear All Button -->
-  <button id="clearButton" style="margin-top: 20px; padding: 5px 10px; font-size: 16px;">Clear All</button>
+  <!-- <div id="controls">
+    <select id="colorPicker">
+      <option value="red">Red</option>
+      <option value="yellow">Yellow</option>
+      <option value="blue">Blue</option>
+    </select>
+  
+    <button id="clearButton">Clear All</button>
+  </div> -->
 
   <!-- Wrapper for SVG -->
   <div id="svgWrapper"></div>
