@@ -6,15 +6,9 @@
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    background-color: #f1eadc;
+    background-color: #cac3f262;
     color: #333;
     text-align: left; /* Align text to the left */
-  }
-  
-  h1 {
-    margin-top: 30px;
-    font-size: 2em;
-    color: #222;
   }
 
   .tooltip {
@@ -34,6 +28,7 @@
     fill: #f9f5f5;
     margin: 20px;
     gap: 10px;
+    opacity: 0.65;
   }
   
   #controls {
@@ -60,17 +55,19 @@
   }
 
   #pageHeader {
-    background-color: #e2ded1; /* soft yellow background */
+    background-color: #6657856b; /* soft background */
     padding: 30px 20px;
     text-align: center;
     border-bottom: 1px solid #ddd;
     border-radius: 0px 0px;
   }
+
+  /* #5857856b */
   
   h1 {
     margin: 0;
     font-size: 2.5em;
-    color: #b22222; /* deep red */
+    color: #333;
     letter-spacing: 1px;
   }
   
@@ -109,9 +106,10 @@
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 10px;
-    background-color: #fff8e1;
+    background-color: #a987b15d;
     max-width: 500px;
     max-height: 500px;
+    opacity: 0.80;
   }
   
   .constituencyCard {
@@ -181,7 +179,7 @@
   }
   
   #pnmBar {
-    background-color: #FF0000;
+    background-color: #ff0700;
     margin: 0%;
     border-radius: 0% 0% 0% 0%; 
   }
