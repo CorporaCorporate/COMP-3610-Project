@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="map.css">
   </head>
 <body>
-  <h1>Trinidad and Tobago Constituency Map</h1>
-  <p>2025 General Election Prediction</p>
+  <div id="pageHeader">
+    <h1>Trinidad and Tobago Constituency Map</h1>
+    <p>2025 General Election Prediction</p>
+  </div>
   <div id="tooltip" class="tooltip"></div>
   <div id="seatBarContainer">
     <div id="seatBar">
@@ -34,7 +36,13 @@
   </div> -->
 
   <!-- Wrapper for SVG -->
-  <div id="svgWrapper"></div>
+  <div id="mainContainer">
+    <div id="svgWrapper"></div>
+  
+    <div id="constituencyList">
+      <!-- Constituency cards will go here dynamically -->
+    </div>
+  </div>
 
   <!-- boundaries.js script -->
   <script src="boundaries.js"></script>

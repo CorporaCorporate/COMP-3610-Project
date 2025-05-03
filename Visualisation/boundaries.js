@@ -1,5 +1,6 @@
-const width = 1500;
+const width = 800;
 const height = 800;
+const padding = 20;
 
 // Add this at the top of your D3 script
 const tooltip = d3.select("#tooltip");
@@ -15,27 +16,18 @@ const svg = d3.select("#svgWrapper")
 svg.append("rect")
     .attr("width", width)
     .attr("height", height)
-    .attr("fill", "#fff"); 
+    .attr("fill", "#fff");
 
-// Define party colors
+const mapGroup = svg.append("g")
+    .attr("transform", `translate(${padding}, ${padding})`);  // Adds padding on top-left
+
+const adjustedWidth = width - padding * 2;
+const adjustedHeight = height - padding * 2;
+
 const partyColors = {
     "P.N.M.": "#FF0000",
-    "U.N.C.": "#FFD700", 
-    "UNKNOWN": "#FFF"   
+    "U.N.C.": "#FFD700"
 };
-
-
-window.addEventListener("resize", () => {
-    const container = document.getElementById("svgWrapper");
-    const newWidth = container.offsetWidth;
-    const newHeight = container.offsetHeight || 800;
-
-    projection.fitSize([newWidth, newHeight], { type: "FeatureCollection", features });
-    path.projection(projection);
-
-    svg.selectAll("path")
-        .attr("d", path);
-});
 
 // Utility function to normalize constituency names
 const normalizeName = name => name.trim().toLowerCase();
@@ -67,62 +59,59 @@ d3.json("constituency_leaning_predictions.json").then(function(predictions) {
         console.log("Constituencies in Predictions:", Object.keys(normalizedPredictions));
 
         // Create the projection after the GeoJSON data is loaded
-        const projection = d3.geoMercator().fitSize([width, height], { type: "FeatureCollection", features });
+        const projection = d3.geoMercator().fitSize([adjustedWidth, adjustedHeight], { type: "FeatureCollection", features });
         const path = d3.geoPath().projection(projection);
 
         // Render the map with constituency colors
-        svg.selectAll("path")
-        .data(features)
-        .enter()
-        .append("path")
-        .attr("d", d => path(d))
-        .attr("fill", d => {
-          const constituencyName = normalizeName(d.properties.constituency);
-          const predictedParty = normalizedPredictions[constituencyName];
-          return partyColors[predictedParty] || partyColors["Other"];
-        })
-        .attr("stroke", "#fff")
-        .attr("stroke-width", 1)
-        .on("mouseover", function(event, d) {
-          const constituencyName = normalizeName(d.properties.constituency);
-          const rawName = d.properties.constituency;
-          const predictedParty = normalizedPredictions[constituencyName] || "UNKNOWN";
-      
-          d3.select(this)
-            .attr("stroke", "#000")
-            .attr("stroke-width", 2);
-      
-          d3.select("#tooltip")
-            .style("display", "block")
-            .html(`<strong>${rawName}</strong><br>Winner: ${predictedParty}`)
-            .style("left", `${event.pageX + 10}px`)
-            .style("top", `${event.pageY - 28}px`);
-        })
-        .on("mousemove", function(event) {
-          d3.select("#tooltip")
-            .style("left", `${event.pageX + 10}px`)
-            .style("top", `${event.pageY - 28}px`);
-        })
-        .on("mouseout", function(event, d) {
-          const constituencyName = normalizeName(d.properties.constituency);
-          const predictedParty = normalizedPredictions[constituencyName];
-          const color = partyColors[predictedParty] || partyColors["Other"];
-      
-          d3.select(this)
+        mapGroup.selectAll("path")
+            .data(features)
+            .enter()
+            .append("path")
+            .attr("d", d => path(d))
+            .attr("fill", d => {
+                const constituencyName = normalizeName(d.properties.constituency);
+                const predictedParty = normalizedPredictions[constituencyName];
+                return partyColors[predictedParty];
+            })
             .attr("stroke", "#fff")
             .attr("stroke-width", 1)
-            .attr("fill", color);
-      
-          d3.select("#tooltip").style("display", "none");
-        });
-
-
+            .on("mouseover", function(event, d) {
+                const constituencyName = normalizeName(d.properties.constituency);
+                const rawName = d.properties.constituency;
+                const predictedParty = normalizedPredictions[constituencyName];
+        
+                d3.select(this)
+                    .attr("stroke", "#000")
+                    .attr("stroke-width", 2);
+        
+                d3.select("#tooltip")
+                    .style("display", "block")
+                    .html(`<strong>${rawName}</strong><br>Winner: ${predictedParty}`)
+                    .style("left", `${event.pageX + 10}px`)
+                    .style("top", `${event.pageY - 28}px`);
+            })
+            .on("mousemove", function(event) {
+                d3.select("#tooltip")
+                    .style("left", `${event.pageX + 10}px`)
+                    .style("top", `${event.pageY - 28}px`);
+            })
+            .on("mouseout", function(event, d) {
+                const constituencyName = normalizeName(d.properties.constituency);
+                const predictedParty = normalizedPredictions[constituencyName];
+                const color = partyColors[predictedParty];
+        
+                d3.select(this)
+                    .attr("stroke", "#fff")
+                    .attr("stroke-width", 1)
+                    .attr("fill", color);
+        
+                d3.select("#tooltip").style("display", "none");
+            });
 
         // Count seats
         let seatCounts = {
             "P.N.M.": 0,
             "U.N.C.": 0,
-            "UNKNOWN": 0
         };
 
         features.forEach(feature => {
@@ -130,8 +119,6 @@ d3.json("constituency_leaning_predictions.json").then(function(predictions) {
             const party = normalizedPredictions[name];
             if (seatCounts.hasOwnProperty(party)) {
                 seatCounts[party]++;
-            } else {
-                seatCounts["UNKNOWN"]++;
             }
         });
 
@@ -148,6 +135,21 @@ d3.json("constituency_leaning_predictions.json").then(function(predictions) {
         d3.select("#uncBar").style("width", `${uncPct}%`);
 
 
+        const listContainer = document.getElementById("constituencyList");
+        features.forEach(feature => {
+        const name = feature.properties.constituency;
+        const normName = normalizeName(name);
+        const predicted = normalizedPredictions[normName];
+        const color = partyColors[predicted] || "#ccc";
+
+        const card = document.createElement("div");
+        card.className = "constituencyCard";
+        card.style.borderLeftColor = color;
+        card.innerHTML = `<strong>${name}</strong><br>Predicted Winner: ${predicted}`;
+
+        listContainer.appendChild(card);
+});
+
     }).catch(function(error) {
         console.error("Error loading GeoJSON:", error);
     });
@@ -155,3 +157,18 @@ d3.json("constituency_leaning_predictions.json").then(function(predictions) {
     console.error("Error loading constituency predictions:", error);
 });
 
+// Resizing logic to keep the map responsive
+window.addEventListener("resize", () => {
+    const container = document.getElementById("svgWrapper");
+    const newWidth = container.offsetWidth;
+    const newHeight = container.offsetHeight || 800;
+
+    const adjustedWidth = newWidth - padding * 2;
+    const adjustedHeight = newHeight - padding * 2;
+
+    const projection = d3.geoMercator().fitSize([adjustedWidth, adjustedHeight], { type: "FeatureCollection", features });
+    const path = d3.geoPath().projection(projection);
+
+    mapGroup.selectAll("path")
+        .attr("d", d => path(d));
+});

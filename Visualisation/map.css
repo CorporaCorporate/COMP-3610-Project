@@ -1,16 +1,14 @@
 * {
     box-sizing: border-box;
-    margin: 20px;
-    border-radius: 5% 5%;
+    border-radius: 15px;
   }
   
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    background-color: #f9f9f9;
+    background-color: #f1eadc;
     color: #333;
     text-align: left; /* Align text to the left */
-    padding: 20px;
   }
   
   h1 {
@@ -30,12 +28,6 @@
     box-shadow: 0 0 8px rgba(0,0,0,0.1);
     display: none;
     z-index: 10;
-  }
-  
-  p {
-    font-size: 1.1em;
-    margin-bottom: 20px;
-    color: #555;
   }
 
  rect {
@@ -66,14 +58,69 @@
     border-color: #999;
     background-color: #f0f0f0;
   }
+
+  #pageHeader {
+    background-color: #e2ded1; /* soft yellow background */
+    padding: 30px 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    border-radius: 0px 0px;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #b22222; /* deep red */
+    letter-spacing: 1px;
+  }
+  
+  p {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #555;
+    font-weight: 500;
+  }
+
+  #mainContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* center horizontally */
+    align-items: flex-start;
+    gap: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+  }
   
   #svgWrapper {
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin: 20px auto;
+    margin: left;
+    justify-content: right;
     width: 100%;
-    max-width: 1500px;
+    max-width: 500px;
+    max-height: 500px;
+  }
+  
+  #constituencyList {
+    flex: 1;
+    margin: right;
+    justify-content: center;
+    overflow-y: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff8e1;
+    max-width: 500px;
+    max-height: 500px;
+  }
+  
+  .constituencyCard {
+    margin-bottom: 12px;
+    padding: 8px 12px;
+    border-left: 6px solid #ccc;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
   }
   
   svg {
@@ -82,7 +129,7 @@
     display: block;
 
   }
-  
+
   @media (max-width: 768px) {
     h1 {
       font-size: 1.6em;
