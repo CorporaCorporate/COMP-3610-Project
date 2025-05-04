@@ -9,13 +9,8 @@ gdf = gpd.read_file(geo_path)
 # Load Constituency file 
 data = pd.read_json(r"D:\UWI\Year 3\Sem 2\COMP3610-Big-Data\Project\Project Clone 2\COMP-3610-Project\constituency_leaning_predictions.json")
 
+gdf.columns 
 
-# Merge GeoDataFrame with predictions
-# Check your actual column name in the GeoJSON for constituency label
-# Adjust "constituency_name" to match
-gdf.columns  # Use this to check what the constituency column is named
-
-# Assuming it's called "Name", adjust as needed:
 merged = gdf.merge(data, left_on="Name", right_on="Constituency", how="left")
 
 # Map party names to colors
