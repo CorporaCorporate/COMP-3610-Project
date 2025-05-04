@@ -2,7 +2,7 @@ const width = 800;
 const height = 800;
 const padding = 20;
 
-// Add this at the top of your D3 script
+
 const tooltip = d3.select("#tooltip");
 
 
@@ -20,7 +20,7 @@ svg.append("rect")
     .attr("fill", "#fff");
 
 const mapGroup = svg.append("g")
-    .attr("transform", `translate(${padding}, ${padding})`);  // Adds padding on top-left
+    .attr("transform", `translate(${padding}, ${padding})`);
 
 const adjustedWidth = width - padding * 2;
 const adjustedHeight = height - padding * 2;
