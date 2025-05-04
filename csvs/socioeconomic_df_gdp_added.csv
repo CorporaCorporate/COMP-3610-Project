@@ -1,4 +1,4 @@
-Year,GDP (Per Capita US$),GNI (Per Capita US $),GNI (Percentage Change),Homicide_rate_per_100k,Annual (Percentage Change),Inflation,Unemployment,Net Migration Rate,Growth Rate,GDP_(US$)
+Year,GDP (Per Capita US$),GNI (Per Capita US $),GNI (Percentage Change),Homicide_rate_per_100k,Homicide (Annual Percentage Change),Inflation,Unemployment,Net Migration Rate,Growth Rate,GDP_(US$)
 2000,7586.43,5140,10.54,9.01,25.24,3.555413197,12.1,-4.353,-11.05%,8154342116.10311
 2001,8123.99,5770,12.26,11.28,25.24,5.536653263,10.88,-3.811,-12.45%,8824849191.03571
 2002,8315.5,6420,11.27,12.7,12.62,4.150058617,10.39,-3.27,-14.20%,9008298228.60273
