@@ -5,6 +5,7 @@ const padding = 20;
 // Add this at the top of your D3 script
 const tooltip = d3.select("#tooltip");
 
+
 // Create SVG element
 const svg = d3.select("#svgWrapper")
     .append("svg")
