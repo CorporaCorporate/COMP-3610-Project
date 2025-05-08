@@ -149,6 +149,7 @@ d3.json("constituency_leaning_predictions.json").then(function(predictions) {
         card.innerHTML = `<strong>${name}</strong><br>Predicted Winner: ${predicted}`;
 
         listContainer.appendChild(card);
+
 });
 
     }).catch(function(error) {
@@ -158,6 +159,85 @@ d3.json("constituency_leaning_predictions.json").then(function(predictions) {
     console.error("Error loading constituency predictions:", error);
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    Papa.parse("/csvs/tt_constituency_elasticity.csv", {
+      download: true,
+      header: true,
+      complete: function (results) {
+        const allData = results.data;
+        const yearSelector = document.getElementById("yearSelector");
+        const container = document.getElementById("constituencyTableContainer");
+  
+        // Get unique years
+        const uniqueYears = [...new Set(allData.map(row => row.YEAR).filter(Boolean))];
+        uniqueYears.sort();
+  
+        // Populate dropdown
+        uniqueYears.forEach(year => {
+          const option = document.createElement("option");
+          option.value = year;
+          option.textContent = year;
+          yearSelector.appendChild(option);
+        });
+  
+        // Listen for dropdown changes
+        yearSelector.addEventListener("change", () => {
+          const selectedYear = yearSelector.value;
+          const filteredData = allData.filter(row => row.YEAR === selectedYear);
+          renderTable(filteredData);
+        });
+  
+        // Initial render for most recent year
+        if (uniqueYears.length > 0) {
+          const latestYear = uniqueYears[uniqueYears.length - 1];
+          yearSelector.value = latestYear;
+          const initialData = allData.filter(row => row.YEAR === latestYear);
+          renderTable(initialData);
+        }
+  
+        function renderTable(data) {
+          container.innerHTML = ""; // Clear previous content
+          if (data.length === 0) return;
+  
+          const table = document.createElement("table");
+  
+          // Table header
+          const thead = document.createElement("thead");
+          const headerRow = document.createElement("tr");
+          Object.keys(data[0]).forEach(key => {
+            if (key !== "YEAR") {
+              const th = document.createElement("th");
+              th.textContent = key === "SWING_PROB" ? "SWING PROBABILITY" : key;
+              headerRow.appendChild(th);
+            }
+          });
+          thead.appendChild(headerRow);
+          table.appendChild(thead);
+  
+          // Table body
+          const tbody = document.createElement("tbody");
+          data.forEach(row => {
+            const tr = document.createElement("tr");
+            Object.entries(row).forEach(([key, value]) => {
+              if (key !== "YEAR") {
+                const td = document.createElement("td");
+                if (key === "INCUMBENT") {
+                  td.textContent = value === "1" ? "PNM" : value === "0" ? "UNC" : value;
+                } else {
+                  td.textContent = value;
+                }
+                tr.appendChild(td);
+              }
+            });
+            tbody.appendChild(tr);
+          });
+  
+          table.appendChild(tbody);
+          container.appendChild(table);
+        }
+      }
+    });
+  });
 // Resizing logic to keep the map responsive
 window.addEventListener("resize", () => {
     const container = document.getElementById("svgWrapper");
@@ -167,7 +247,7 @@ window.addEventListener("resize", () => {
     const adjustedWidth = newWidth - padding * 2;
     const adjustedHeight = newHeight - padding * 2;
 
-    const projection = d3.geoMercator().fitSize([adjustedWidth, adjustedHeight], { type: "FeatureCollection", features });
+    const projection = d3.geoMercator().fitSize([adjustedWidth, adjustedHeight], { type: "FeatureCollection", feature });
     const path = d3.geoPath().projection(projection);
 
     mapGroup.selectAll("path")

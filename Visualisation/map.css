@@ -200,3 +200,59 @@
     font-weight: bold;
     margin: 0 8px;
   }
+
+  #profileDataSection {
+    margin: 40px auto;
+    max-width: 1000px;
+    background-color: #d2b8d5b4;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .scrollable-table {
+    overflow-x: auto;
+    max-height: 400px;
+  }
+  
+  .scrollable-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgb(203, 193, 220);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .scrollable-table th, .scrollable-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #7f5e8e;
+    text-align: left;
+  }
+  
+  .scrollable-table th {
+    background-color: #b193c4;
+    font-weight: bold;
+    border-radius: 0px;
+  }
+
+  .flex-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .flex-header.space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+
+  /* Optional: spacing for label + dropdown */
+  .dropdown-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }

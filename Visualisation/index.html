@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Constituency Map</title>
     <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
     <link rel="stylesheet" href="map.css">
   </head>
 <body>
@@ -42,6 +43,18 @@
     <div id="constituencyList">
       <!-- Constituency cards will go here dynamically -->
     </div>
+  </div>
+
+  <div id="profileDataSection">
+    <div class="flex-header space-between">
+      <h2 style="margin: 0;">Marginal Constituency Profiles</h2>
+      <div class="dropdown-wrapper">
+        <label for="yearSelector"><strong>Year:</strong></label>
+        <select id="yearSelector"></select>
+      </div>
+    </div>
+  
+    <div id="constituencyTableContainer" class="scrollable-table"></div>
   </div>
 
   <!-- boundaries.js script -->
