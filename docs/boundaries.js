@@ -219,7 +219,7 @@ d3.json("constituency_leaning_predictions.json").then(function(predictions) {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    Papa.parse("/csvs/tt_constituency_elasticity.csv", {
+    Papa.parse("tt_constituency_elasticity.csv", {
       download: true,
       header: true,
       complete: function (results) {
