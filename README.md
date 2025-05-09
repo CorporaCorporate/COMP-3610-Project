@@ -10,8 +10,6 @@ Upload/scrape the respective election years and macroeconomic/socioeconomic csvs
 Run each notebook in this order:
 
 data_collecion_and_eda
-election_results
-eda_election_results
 feature_engineering
 
 Save the changes made and run the HTML with live server or follow this [link] (https://corporacorporate.github.io/COMP-3610-Project/)
