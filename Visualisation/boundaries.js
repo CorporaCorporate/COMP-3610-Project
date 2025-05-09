@@ -30,8 +30,8 @@ const partyColors = {
 };
 
 const colorScales = {
-    "P.N.M.": d3.interpolateRgb("#ffe5e5", "#FF0000"),   // light red → strong red
-    "U.N.C.": d3.interpolateRgb("#fff8cc", "#FFD700")    // light yellow → deep gold
+    "P.N.M.": d3.interpolateRgb("#FF0000", "#ffe5e5"),   // light red → strong red
+    "U.N.C.": d3.interpolateRgb("#FFD700", "#fff8cc")    // light yellow → deep gold
 };
 
 // Utility function to normalize constituency names
