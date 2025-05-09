@@ -38,7 +38,7 @@ const colorScales = {
 const normalizeName = name => name.trim().toLowerCase();
 
 // Load constituency predictions
-d3.json("/csvs/constituency_leaning_predictions.json").then(function(predictions) {
+d3.json("/docs/constituency_leaning_predictions.json").then(function(predictions) {
     console.log("Constituency predictions loaded:", predictions);
 
     // Normalize predictions keys
