@@ -24,10 +24,14 @@ const mapGroup = svg.append("g")
 
 const adjustedWidth = width - padding * 2;
 const adjustedHeight = height - padding * 2;
-
 const partyColors = {
     "P.N.M.": "#FF0000",
     "U.N.C.": "#FFD700"
+};
+
+const colorScales = {
+    "P.N.M.": d3.interpolateRgb("#ffe5e5", "#FF0000"),   // light red → strong red
+    "U.N.C.": d3.interpolateRgb("#fff8cc", "#FFD700")    // light yellow → deep gold
 };
 
 // Utility function to normalize constituency names
@@ -78,9 +82,28 @@ d3.json("/csvs/constituency_leaning_predictions.json").then(function(predictions
             .attr("d", d => path(d))
             .attr("fill", d => {
                 const constituencyName = normalizeName(d.properties.constituency);
-                const predictedData = normalizedPredictions[constituencyName];
-                const predictedParty = predictedData?.Predicted_Winning_Party;
-                return partyColors[predictedParty] || "#ccc";  // fallback color if unmatched
+                const predictionData = normalizedPredictions[constituencyName];
+                if (!predictionData) return "#ccc";
+            
+                const party = predictionData.Predicted_Winning_Party;
+                const unc = predictionData.Predicted_UNC_Vote_Share_2025;
+                const pnm = predictionData.Predicted_PNM_Vote_Share_2025;
+                if (unc != null && pnm != null && colorScales[party]) {
+                    const margin = Math.abs(unc - pnm);
+                    const intensity = 1 - Math.min(margin / 0.3, 1);  // margin shading
+                    return colorScales[party](intensity);
+                } else if (partyColors[party]) {
+                    // Safe seat fallback
+                    return partyColors[party];
+                } else {
+                    console.warn(`Missing prediction or color for ${constituencyName}`, { party, unc, pnm });
+                    return "#ccc";
+                }
+            
+                const margin = Math.abs(unc - pnm);
+                const intensity = 1 - Math.min(margin / 0.3, 1);  // closer races = lighter color (max margin ~30%)
+            
+                return colorScales[party](intensity);
             })
             .attr("stroke", "#fff")
             .attr("stroke-width", 1)
@@ -115,9 +138,21 @@ d3.json("/csvs/constituency_leaning_predictions.json").then(function(predictions
             })
             .on("mouseout", function(event, d) {
                 const constituencyName = normalizeName(d.properties.constituency);
-                const predictedData = normalizedPredictions[constituencyName];
-                const predictedParty = predictedData?.Predicted_Winning_Party;
-                const color = partyColors[predictedParty] || "#ccc";
+                const predictionData = normalizedPredictions[constituencyName];
+                const party = predictionData?.Predicted_Winning_Party;
+                const unc = predictionData?.Predicted_UNC_Vote_Share_2025;
+                const pnm = predictionData?.Predicted_PNM_Vote_Share_2025;
+            
+                let color;
+                if (unc != null && pnm != null && colorScales[party]) {
+                    const margin = Math.abs(unc - pnm);
+                    const intensity = 1 - Math.min(margin / 0.3, 1);
+                    color = colorScales[party](intensity);
+                } else if (partyColors[party]) {
+                    color = partyColors[party];
+                } else {
+                    color = "#ccc";
+                }
             
                 d3.select(this)
                     .attr("stroke", "#fff")
@@ -135,7 +170,8 @@ d3.json("/csvs/constituency_leaning_predictions.json").then(function(predictions
 
         features.forEach(feature => {
             const name = normalizeName(feature.properties.constituency);
-            const party = normalizedPredictions[name];
+            const prediction = normalizedPredictions[name];
+            const party = prediction?.Predicted_Winning_Party;
             if (seatCounts.hasOwnProperty(party)) {
                 seatCounts[party]++;
             }
@@ -158,13 +194,18 @@ d3.json("/csvs/constituency_leaning_predictions.json").then(function(predictions
         features.forEach(feature => {
         const name = feature.properties.constituency;
         const normName = normalizeName(name);
-        const predicted = normalizedPredictions[normName];
-        const color = partyColors[predicted] || "#ccc";
-
+        const prediction = normalizedPredictions[normName];
+        const predictedParty = prediction?.Predicted_Winning_Party;
+        const unc = prediction?.Predicted_UNC_Vote_Share_2025;
+        const pnm = prediction?.Predicted_PNM_Vote_Share_2025;
+        const margin = unc != null && pnm != null ? Math.abs(unc - pnm) : null;
+        const intensity = margin != null ? 1 - Math.min(margin / 0.3, 1) : 0.5;
+        const color = partyColors[predictedParty] || colorScales[predictedParty]?.(intensity) || "#ccc";
+        
         const card = document.createElement("div");
         card.className = "constituencyCard";
         card.style.borderLeftColor = color;
-        card.innerHTML = `<strong>${name}</strong><br>Predicted Winner: ${predicted}`;
+        card.innerHTML = `<strong>${name}</strong><br>Predicted Winner: ${predictedParty || "—"}`;
 
         listContainer.appendChild(card);
 
