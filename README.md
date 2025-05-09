@@ -1,2 +1,7 @@
 # COMP-3610-Project
 A PREDICTIVE MODEL FOR ELECTORAL OUTCOMES  IN TRINIDAD &amp; TOBAGO
+
+Electoral Outcome Prediction Project requirements:
+base anaconda installation
+Sklearn installation: %pip install scikit-learn
+
