@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constituency Map</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <link rel="stylesheet" href="map.css">
+  </head>
+<body>
+  <div id="pageHeader">
+    <h1>Trinidad and Tobago Electoral Map</h1>
+    <p>2025 General Election Prediction</p>
+  </div>
+  <div id="tooltip" class="tooltip"></div>
+  <div id="seatBarContainer">
+    <div id="seatBar">
+      <div id="pnmBar" class="seatSegment"></div>
+      <div id="uncBar" class="seatSegment"></div>
+      <div id="majorityLine"></div> <!-- Majority marker -->
+    </div>
+    <div id="seatLabels">
+      <span id="pnmCount">0</span> P.N.M.
+      <span id="uncCount">0</span> U.N.C.
+    </div>
+  </div>
+
+  <!-- <div id="controls">
+    <select id="colorPicker">
+      <option value="red">Red</option>
+      <option value="yellow">Yellow</option>
+      <option value="blue">Blue</option>
+    </select>
+  
+    <button id="clearButton">Clear All</button>
+  </div> -->
+
+  <!-- Wrapper for SVG -->
+  <div id="mainContainer">
+    <div id="svgWrapper"></div>
+  
+    <div id="constituencyList">
+      <!-- Constituency cards will go here dynamically -->
+    </div>
+  </div>
+
+  <div id="profileDataSection">
+    <div class="flex-header space-between">
+      <h2 style="margin: 0;">Marginal Constituency Profiles</h2>
+      <div class="dropdown-wrapper">
+        <label for="yearSelector"><strong>Year:</strong></label>
+        <select id="yearSelector"></select>
+      </div>
+    </div>
+  
+    <div id="constituencyTableContainer" class="scrollable-table"></div>
+  </div>
+
+  <div id="profileDataSection">
+    <div class="flex-header space-between">
+      <h2 style="margin: 0;">Socioeconomic Indicators</h2>
+      <div class="dropdown-wrapper">
+        <label for="indicatorSelector"><strong>Indicator:</strong></label>
+        <select id="indicatorSelector" multiple></select>
+      </div>
+    </div>
+    <div id="chart">
+  </div>
+
+  <!-- boundaries.js script -->
+  <script src="boundaries.js"></script>
+</body>
+</html>
