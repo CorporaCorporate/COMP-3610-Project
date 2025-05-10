@@ -57,7 +57,7 @@
   #pageHeader {
     position: sticky;
     top: 0;
-    z-index: 20;
+    z-index: 999;
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(16px);
@@ -65,10 +65,8 @@
     text-align: center;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.10);
-    border-radius: 0px 0px;
+    transition: transform 0.3s ease;
   }
-
-  /* #5857856b */
   
   h1 {
     margin: 0;
@@ -279,9 +277,125 @@
   
   #indicatorSelector {
     width: 300px;
-    height: 120px;
+    height: 60px;
     padding: 8px;
     border: 1px solid #bdb18e;
     border-radius: 8px;
     font-size: 14px;
+  }
+
+  @media (max-width: 768px) {
+    #mainContainer {
+      flex-direction: column;
+      align-items: center;
+      width: 90%;
+    }
+  
+    #constituencyList {
+      max-height: 300px;
+      font-size: 0.85em;
+      padding: 8px;
+    }
+  
+    .constituencyCard {
+      padding: 6px 10px;
+      margin-bottom: 8px;
+    }
+  
+    #seatBarContainer {
+      position: relative;
+      max-width: 300px;
+      margin: 20px auto;
+      text-align: center;
+    }
+  
+    #profileDataSection {
+      max-width: 90%;
+      padding: 15px;
+      font-size: 0.85em;
+      margin: 20px auto;
+    }
+  
+    .scrollable-table {
+      max-height: 250px;
+      overflow-y: auto;
+    }
+  
+    .scrollable-table th,
+    .scrollable-table td {
+      padding: 6px 8px;
+      font-size: 0.85em;
+    }
+  
+    .dropdown-wrapper label,
+    .dropdown-wrapper select {
+      font-size: 0.85em;
+    }
+  
+    #chart {
+      max-width: 90%;
+      padding: 10px;
+      font-size: 0.85em;
+      overflow-x: auto;
+    }
+  
+    .chart-controls {
+      flex-direction: column;
+      gap: 0.5rem;
+      font-size: 0.85em;
+    }
+  
+    #indicatorSelector {
+      width: 100%;
+      font-size: 0.85em;
+      height: auto;
+    }
+
+    #pageHeader{
+      position: static;
+    }
+  
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow-x: hidden;
+    }
+  
+    h1 {
+      font-size: 1.4em;
+    }
+  
+    h2 {
+      font-size: 1.1em;
+    }
+  
+    p, span, label, select, button, td, th {
+      font-size: 0.9em;
+    }
+
+  }
+
+  @media (max-width: 768px) and (orientation: landscape) {
+    #mainContainer {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 1rem;
+      width: 100%;
+    }
+
+    #pageHeader{
+      position: static;
+    }
+  
+    #svgWrapper,
+    #constituencyList {
+      max-width: 45%;
+      height: auto;
+    }
+  
+    #constituencyList {
+      max-height: 80vh;
+      overflow-y: auto;
+    }
   }

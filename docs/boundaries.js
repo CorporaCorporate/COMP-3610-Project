@@ -311,7 +311,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const data = results.data;
         const indicators = Object.keys(data[0]).filter(key => key !== "Year");
         const selector = d3.select("#indicatorSelector");
-        const svgWidth = 800, svgHeight = 350, margin = { top: 50, right: 50, bottom: 5, left: 100 };
+        const svgWidth = 800, svgHeight = 350, margin = { top: 50, right: 200, bottom: 20, left: 50 };
 
         indicators.forEach(indicator => {
             selector.append("option").attr("value", indicator).text(indicator);
@@ -321,12 +321,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
         function updateChart() {
             const selected = Array.from(selector.node().selectedOptions).map(d => d.value);
+            const containerWidth = document.querySelector("#chart").clientWidth;
+            const aspectRatio = svgWidth / svgHeight;
+
             d3.select("#chart").html("");
         
             const svg = d3.select("#chart")
                 .append("svg")
-                .attr("width", svgWidth)
-                .attr("height", svgHeight);
+                .attr("viewBox", `0 0 ${svgWidth} ${svgHeight}`)
+                .attr("preserveAspectRatio", "xMidYMid meet")
+                .attr("width", containerWidth)
+                .attr("height", (containerWidth / aspectRatio));
         
             const x = d3.scaleLinear()
                 .domain(d3.extent(data, d => d.Year))
@@ -417,18 +422,27 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-// Resizing logic to keep the map responsive
-// window.addEventListener("resize", () => {
-//     const container = document.getElementById("svgWrapper");
-//     const newWidth = container.offsetWidth;
-//     const newHeight = container.offsetHeight || 800;
+let lastScrollTop = 0;
+const header = document.getElementById("pageHeader");
 
-//     const adjustedWidth = newWidth - padding * 2;
-//     const adjustedHeight = newHeight - padding * 2;
+window.addEventListener("scroll", function () {
+  const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-//     const projection = d3.geoMercator().fitSize([adjustedWidth, adjustedHeight], { type: "FeatureCollection", features });
-//     const path = d3.geoPath().projection(projection);
+  // Debugging: log scroll direction and position
+  console.log(`currentScroll: ${currentScroll}, lastScrollTop: ${lastScrollTop}`);
+  
+  if (window.innerWidth <= 768) {
+    if (currentScroll > lastScrollTop) {
+      // Scrolling down - hide header
+      header.style.transform = "translateY(-100%)";
+      console.log("Header hidden"); // Debugging
+    } else {
+      // Scrolling up - show header
+      header.style.transform = "translateY(0)";
+      console.log("Header shown"); // Debugging
+    }
+  }
 
-//     mapGroup.selectAll("path")
-//         .attr("d", d => path(d));
-// });
+  // Update lastScrollTop to the current scroll position
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+});
